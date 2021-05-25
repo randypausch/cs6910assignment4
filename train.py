@@ -187,9 +187,9 @@ class RBM:
 				c0 += np.matmul(self.v,h_tt.T) #784*1 1*50 = 784*50
 				c1 += self.v #784*1
 				c2 += h_tt #50*1
-		self.weigh_gibbs += self.lr*((np.matmul(vd, h.T)) - (1/(self.epochs-self.itersum))*c0 ) #784*1 1*50 = 784*50 - 784*50
-		self.b_gibbs += self.lr*(vd - (1/(self.epochs-self.itersum))*c1 )
-		self.c_gibbs += self.lr*(h - (1/(self.epochs-self.itersum))*c2 )
+		self.weigh_gibbs += self.lr*((np.matmul(vd, h.T)) - (1/(self.steps-self.itersum))*c0 ) #784*1 1*50 = 784*50 - 784*50
+		self.b_gibbs += self.lr*(vd - (1/(self.steps-self.itersum))*c1 )
+		self.c_gibbs += self.lr*(h - (1/(self.steps-self.itersum))*c2 )
 
 
 	def __gibbsSampling(self, data):
