@@ -35,5 +35,10 @@ optional arguments:
   --type1 TYPE1
 ```
 
+```
+Requirements: Python3.7, Numpy, WandB, Sklearn, tqdm, and Pandas.
+
+```
+
 The report can be found here - https://wandb.ai/shiv/dlpa4-manoj-shivangi/reports/Deep-Learning-Assignment-4--Vmlldzo3MjQzMTU?accessToken=yvxrsp0oo3vo71wgk67iezy1gh54d2vrv7af4u6lny9yagt4zbwk35ujc2v554gu
 
