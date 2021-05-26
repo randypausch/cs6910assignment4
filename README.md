@@ -3,16 +3,13 @@
 If you haven't done already, 
 
 
-```
-git clone https://github.com/randypausch/cs6910assignment4
-
+```git clone https://github.com/randypausch/cs6910assignment4
 ```
 
 To run training script,
 
 ```
 python train.py
-
 ```
 
 For detailed arguments:
@@ -36,4 +33,6 @@ optional arguments:
   --vis VIS
   --type1 TYPE1
 ```
+
+The report can be found here - https://wandb.ai/shiv/dlpa4-manoj-shivangi/reports/Deep-Learning-Assignment-4--Vmlldzo3MjQzMTU?accessToken=yvxrsp0oo3vo71wgk67iezy1gh54d2vrv7af4u6lny9yagt4zbwk35ujc2v554gu
 
