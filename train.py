@@ -6,6 +6,7 @@ from sklearn.model_selection import train_test_split
 from sklearn import metrics
 import wandb
 import argparse
+from tqdm import tqdm
 
 model = linear_model.LogisticRegression(multi_class="multinomial",max_iter= 5000)
 
@@ -148,7 +149,7 @@ class RBM:
 		for i in range(self.epochs):
 			wandb.log({"Epoch":(i+1)})
 
-			for j in data:
+			for j in tqdm(data):
 				# print(i)
 				self.__CD_compute(j)
 			hid = forwardcompute(self.weight,self.c,self.X_val,self.hidden_layer)
@@ -195,7 +196,7 @@ class RBM:
 	def __gibbsSampling(self, data):
 		self.v = data[0].reshape(-1,1)
 		for j in range(self.epochs):
-			for i in data:
+			for i in tqdm(data):
 				self.__gibbsCompute(i)
 			hid = forwardcompute(self.weigh_gibbs,self.c_gibbs,self.X_val,self.hidden_layer)
 			hid_test = forwardcompute(self.weigh_gibbs,self.c_gibbs,self.test,self.hidden_layer)
