@@ -16,7 +16,7 @@ hidden_representation = np.load("dlpa4/HiddenRepresentations.npy")
 tsne = TSNE(n_components=2)
 tsne_hidden = tsne.fit_transform(hidden_representation)
 plt.figure(figsize=(6, 5))
-colors = ["#476A2A", "#7851B8", "#BD3430", "#4A2D4E", "#875525", "#A83683","#4E655E","#853541","#3A3120","#535D8E"]
+colors = ['r', 'g', 'b', 'c', 'm', 'y', 'k', 'pink', 'orange', 'purple']
 for i, c, label in zip(labels, colors,s):
     plt.scatter(tsne_hidden[lab_test == i, 0], tsne_hidden[lab_test == i, 1], c=c, label=label)
 plt.xlabel("T-SNE Component 1")
