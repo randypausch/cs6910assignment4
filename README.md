@@ -1,4 +1,4 @@
-# cs6910assignment4
+# RBM's using Blocked Gibbs Sampling and Contrastive Divergence
 
 If you haven't done already, 
 
